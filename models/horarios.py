@@ -9,7 +9,7 @@ class asw_horarios(models.Model):
         string=u'Compania',
         comodel_name='res.company',
         ondelete='set null',
-        default='self.env.user.compan_id',
+        default='self.env.user.company_id',
     )
 
     day = fields.Char(

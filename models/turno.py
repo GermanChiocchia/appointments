@@ -26,12 +26,13 @@ class asw_turno(models.Model):
 
     partner_id = fields.Many2one(
         string=u'Cliente',
-        comodel_name='',
+        comodel_name='res.partner',
         ondelete='set null',
     )
 
     state = fields.Selection(
         selection=[('Borrador','Asignado','Cancelado','Finalizado')],
+        default='Borrador',
     )
 
     generator_id = fields.Many2one(

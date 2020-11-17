@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="view_form_compania" model="ir.ui.view">
+
+        </record>
+        <record id="view_tree_compania" model="ir.ui.view">
+
+        </record>
+        <record id="view_search_compania" model="ir.ui.view">
+
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="view_form_turno" model="ir.ui.view">
+            <field name="arch" type="xml">
+                <form string='Datos del alumno'>
+                    <header>
+                        
+                    </header>
+                    <sheet>
+                        <notebook>
+                            <page string='Datos' >
+                                <group col='4' string='Datos del alumno'>
+                                
+                               </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_tree_dia_no_laboral" model="ir.ui.view">
+
+        </record>
+        <record id="view_search_dia_no_laboral" model="ir.ui.view">
+
+        </record>
+    </data>
+</odoo>
