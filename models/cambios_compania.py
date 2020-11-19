@@ -3,7 +3,7 @@ from odoo import models, fields, api, exceptions
 
 class asw_cambios_compania(models.Model):
     _name = 'asw.cambio_compania'
-    _description = 'Cambios componia'
+    _description = 'Cambios compania'
 
     appointment_qty = fields.Integer(
         string=u'Cantidad de turnos',
