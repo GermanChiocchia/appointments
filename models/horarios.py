@@ -5,7 +5,7 @@ class asw_horarios(models.Model):
     _name = 'asw.horario'
     _description = 'Horarios'
 
-    company_id = fields.Mani2one(
+    company_id = fields.Many2one(
         string=u'Compania',
         comodel_name='res.company',
         ondelete='set null',

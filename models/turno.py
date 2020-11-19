@@ -16,11 +16,11 @@ class asw_turno(models.Model):
         string=u'Fecha',
     )
 
-    date_start = fields.DateTime(
+    date_start = fields.Datetime(
         string=u'Fecha de inicio',
     )
 
-    date_end = fields.DateTime(
+    date_end = fields.Datetime(
         string=u'Fecha de fin',
     )
 
