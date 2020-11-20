@@ -1,4 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_asw_dia_no_laboral,asw_dia_no_laboral,model_asw_dia_no_laboral,,1,1,1,1
 access_asw_turno,asw_turno,model_asw_turno,,1,1,1,1
-access_asw_generador_turnos,asw_generador_turnos,model_asw_generador_turnos,,1,1,1,1
+access_asw_generador_turno,asw_generador_turno,model_asw_generador_turno,,1,1,1,1
+access_asw_horario,asw_horario,model_asw_horario,,1,1,1,1
+access_asw_cambio_compania,asw_cambio_compania,model_asw_cambio_compania,,1,1,1,1

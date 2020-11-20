@@ -2,6 +2,8 @@
 <odoo>
     <data noupdate="0">
         <record id="view_form_generador_turnos" model="ir.ui.view">
+            <field name="name">Generador de turnos</field>
+            <field name="model">asw.generador_turno</field>
             <field name="arch" type="xml">
                 <form string='Datos del generador de turnos'>
                     <header>
@@ -9,8 +11,8 @@
                     </header>
                     <sheet>
                         <div>
-                            <label for='state' class='oe_edit_only' />
-                            <h1><field name="state" /></h1>
+                            <label for='company_id' class='oe_edit_only' />
+                            <h1><field name="company_id" /></h1>
                         </div>
                         <notebook>
                             <page string='Datos' >
@@ -33,11 +35,13 @@
                 </form>
             </field>
         </record>
+
         <record id="view_tree_generador_turnos" model="ir.ui.view">
             <field name="name">Generador de turnos</field>
-            <field name="model">asw.generador_turnos</field>
+            <field name="model">asw.generador_turno</field>
             <field name="arch" type="xml">
                 <tree string='Generador de turnos' sample='1'>
+                    <field name="company_id" />
                     <field name="state" />
                     <field name="date_start" />
                     <field name="date_end" />
@@ -45,11 +49,13 @@
                 </tree>
             </field>
         </record>
+
         <record id="view_search_generador_turnos" model="ir.ui.view">
             <field name="name">Generador de turnos</field>
-            <field name="model">asw.generador_turnos</field>
+            <field name="model">asw.generador_turno</field>
             <field name="arch" type="xml">
                 <search string='Generador de turnos'>
+                    <field name="company_id" />
                     <field name="state" />
                     <field name="date_start" />
                     <field name="date_end" />
