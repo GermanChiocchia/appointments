@@ -19,9 +19,9 @@
                                         <newline />
                                     <separator string='Datos del turno generado' />
                                         <newline />
+                                    <field name="state" />
                                     <field name="date_start" />
                                     <field name="date_end" />
-                                    <field name="state" />
                                         <newline />
                                     <separator string='Datos de turnos' />
                                         <newline />
@@ -38,9 +38,9 @@
             <field name="model">asw.generador_turnos</field>
             <field name="arch" type="xml">
                 <tree string='Generador de turnos' sample='1'>
+                    <field name="state" />
                     <field name="date_start" />
                     <field name="date_end" />
-                    <field name="state" />
                     <field name="turnos_ids" />
                 </tree>
             </field>
@@ -49,14 +49,14 @@
             <field name="name">Generador de turnos</field>
             <field name="model">asw.generador_turnos</field>
             <field name="arch" type="xml">
-                <search string='Generador de turnos' sample='1'>
+                <search string='Generador de turnos'>
+                    <field name="state" />
                     <field name="date_start" />
                     <field name="date_end" />
-                    <field name="state" />
                     <field name="turnos_ids" />
+                    <filter string="Cancelado" name="Cancelado" domain="[('state', '=', 'cancelado')]"/>
                     <filter string="Sin fecha inicio" name="Sin fecha inicio" domain="[('date_start', '=', None)]"/>
                     <filter string="Sin fecha fin" name="Sin fecha fin" domain="[('date_end', '=', None)]"/>
-                    <filter string="Cancelado" name="Cancelado" domain="[('state', '=', 'cancelado')]"/>
                 </search>
             </field>
         </record>
