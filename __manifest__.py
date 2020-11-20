@@ -24,7 +24,7 @@ appointments Module Project.
         ],
     },
     'data': [
-        'views/compania_view.xml',
+        #'views/compania_view.xml',
         'views/dia_no_laboral_view.xml',
         'views/generador_turnos.xml',
         'views/turno_view.xml',

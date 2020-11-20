@@ -22,10 +22,11 @@ class asw_generador_turnos(models.Model):
 
     state = fields.Selection(
         string='Estado',
-        selection=[('Borrador', 'Procesado')],
+        selection=[('borrador','Borrador'), ('procesado', 'Procesado')],
     )
 
-    turnos = fields.One2many(
+    turnos_ids = fields.One2many(
         string=u'Turnos generados',
         comodel_name='asw.turno',
+        inverse_name='generator_id',
     )

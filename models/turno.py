@@ -31,11 +31,12 @@ class asw_turno(models.Model):
     )
 
     state = fields.Selection(
-        selection=[('Borrador','Asignado','Cancelado','Finalizado')],
-        default='Borrador',
+        string='Estado',
+        selection=[('borrador', 'Borrador'),('asignado', 'Asignado'),('cancelado', 'Cancelado'),('finalizado', 'Finalizado')],
+        default='borrador',
     )
 
     generator_id = fields.Many2one(
         string=u'Generador',
-        comodel_name='generator',
+        comodel_name='asw.generador_turno',
     )
