@@ -13,6 +13,6 @@ class res_company(models.Model):
 
     timeframes_ids = fields.One2many(
         string=u'Horarios',
-        comodel_name='',
-        inverse_name='',
+        comodel_name='asw.horario',
+        inverse_name='company_id',
     )
