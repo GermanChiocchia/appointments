@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="view_form_company" model="ir.ui.view">
+            <field name="name"></field>
+            <field name="model">res.company</field>
+            <field name="arch" type="xml">
+                <form string='Datos de compania'>
+                    <header>
+                        
+                    </header>
+                    <sheet>
+                        <div>
+                            <label for="" class='oe_edit_only' />
+                            <h1><field name="" /></h1>
+                        </div>
+                        <notebook>
+                            <page string='Horarios' >
+                                <group col='4' string='Horarios compania'>
+                                    <field name="timeframes_ids" />
+                               </group>
+                            </page>
+
+                            <page string='Turnos' >
+                                <group col='4' string='Datos de turnos'>
+                                    <field name="day" />
+                                    <field name="enabled" />
+                                        <newline />
+                                    <separator string='Compania' />
+                                        <newline />
+                                    <field name="company_id" />
+                               </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_tree_compania" model="ir.ui.view">
+
+        </record>
+        <record id="view_search_compania" model="ir.ui.view">
+
+        </record>
+    </data>
+</odoo>
