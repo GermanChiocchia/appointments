@@ -15,6 +15,7 @@
                             <h1><field name="" /></h1>
                         </div>
                         <notebook>
+
                             <page string='Horarios' >
                                 <group col='4' string='Horarios compania'>
                                     <field name="timeframes_ids" />
@@ -31,15 +32,34 @@
                                     <field name="company_id" />
                                </group>
                             </page>
+
+                            <page string="Campos nuevos">
+
+                            </page>
+
                         </notebook>
                     </sheet>
                 </form>
             </field>
         </record>
         <record id="view_tree_compania" model="ir.ui.view">
+            <field name="name"></field>
+            <field name="model">res.company</field>
+            <field name="arch" type="xml">
+                <tree string='Companias' sample='1'>
+                    <field name="timeframes_ids" />
+                </tree>
+            </field>
 
         </record>
         <record id="view_search_compania" model="ir.ui.view">
+            <field name="name"></field>
+            <field name="model">res.company</field>
+            <field name="arch" type="xml">
+                <search name="Busqueda de companias">
+                    <field name="timeframes_ids" />
+                </search>
+            </field>
 
         </record>
     </data>
