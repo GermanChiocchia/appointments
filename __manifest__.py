@@ -27,7 +27,7 @@ appointments Module Project.
         'views/dia_no_laboral_view.xml',
         'views/generador_turnos_view.xml',
         'views/turno_view.xml',
-        'views/company_view.xml',
+        'views/res_company_view.xml',
         'views/kine_menu_view.xml',
         'security/ir.model.access.csv',
     ],
