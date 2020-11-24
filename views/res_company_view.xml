@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data noupdate="0">
-        <record id="view_form_company" model="ir.ui.view">
-            <field name="name">Compania</field>
+        <record id="res_company_view_form" model="ir.ui.view">
+            <field name="name">res.company.view.form</field>
             <field name="model">res.company</field>
             <field name="arch" type="xml">
                 <form string='Datos de compania'>
@@ -43,8 +43,8 @@
             </field>
         </record>
 
-        <record id="view_tree_compania" model="ir.ui.view">
-            <field name="name">Compania</field>
+        <record id="res_company_view_tree" model="ir.ui.view">
+            <field name="name">res.company.view.tree</field>
             <field name="model">res.company</field>
             <field name="arch" type="xml">
                 <tree string='Companias' sample='1'>
@@ -54,8 +54,8 @@
 
         </record>
 
-        <record id="view_search_compania" model="ir.ui.view">
-            <field name="name">Compania</field>
+        <record id="res_company_view_search" model="ir.ui.view">
+            <field name="name">res.company.view.search</field>
             <field name="model">res.company</field>
             <field name="arch" type="xml">
                 <search string="Busqueda de companias">
@@ -65,9 +65,9 @@
 
         </record>
 
-         <record id="action_company_act_window" model="ir.actions.act_window">
+         <record id="res_company_action_act_window" model="ir.actions.act_window">
             <field name="type">ir.actions.act_window</field>
-            <field name="name">Companias</field>
+            <field name="name">res.company.action.act.window</field>
             <field name="res_model">res.company</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields, api, exceptions
+from odoo import api, exceptions, fields, models
 
 class asw_dia_no_laboral(models.Model):
     _name = 'asw.dia_no_laboral'

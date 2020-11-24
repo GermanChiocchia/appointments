@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data noupdate="0">
-        <record id="view_form_dia_no_laboral" model="ir.ui.view">
-            <field name="name">Dia no laboral</field>
+        <record id="dia_no_laboral_view_form" model="ir.ui.view">
+            <field name="name">dia.no.laboral.view.form</field>
             <field name="model">asw.dia_no_laboral</field>
             <field name="arch" type="xml">
                 <form string='Datos del dia no laboral'>
@@ -26,8 +26,8 @@
                 </form>
             </field>
         </record>
-        <record id="view_tree_dia_no_laboral" model="ir.ui.view">
-            <field name="name">Dia no laboral</field>
+        <record id="dia_no_laboral_view_tree" model="ir.ui.view">
+            <field name="name">dia.no.laboral.view.tree</field>
             <field name="model">asw.dia_no_laboral</field>
             <field name="arch" type="xml">
                 <tree string='Dias no laborales' sample='1'>
@@ -38,8 +38,8 @@
             </field>
         </record>
 
-        <record id="view_search_dia_no_laboral" model="ir.ui.view">
-            <field name="name">Dia no laboral</field>
+        <record id="dia_no_laboral_view_search" model="ir.ui.view">
+            <field name="name">dia.no.laboral.view.search</field>
             <field name="model">asw.dia_no_laboral</field>
             <field name="arch" type="xml">
                 <search string='Dias no laborales'>
@@ -53,9 +53,9 @@
             </field>
         </record>
 
-        <record id="action_dia_no_laboral_act_window" model="ir.actions.act_window">
+        <record id="dia_no_laboral_action_act_window" model="ir.actions.act_window">
             <field name="type">ir.actions.act_window</field>
-            <field name="name">Dia no laboral</field>
+            <field name="name">dia.no.laboral.action.act.window</field>
             <field name="res_model">asw.dia_no_laboral</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
