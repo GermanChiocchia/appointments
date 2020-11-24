@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data noupdate="0">
-        <menuitem id='menu_root_kine' name='Appointments'  />
+        <menuitem id='menu_root_kine' name='Appointments' />
 
-        <menuitem id='menu_kine_turnos' name='Turnos' action='action_turno_act_window' parent='menu_root_kine' />
-        <menuitem id='menu_kine_generaciones' name='Generaciones' action='action_turno_act_window' parent='menu_root_kine'/>
-        <menuitem id='menu_kine_configuracion' name='Configuración' action='action_turno_act_window' parent='menu_root_kine'/>
+        <menuitem id='menu_kine_turno' name='Turnos' action='action_turno_act_window' parent='menu_root_kine' />
+        <menuitem id='menu_kine_company' name='Companias' action='action_turno_act_window' parent='menu_root_kine' />
+
+        <menuitem id='menu_kine_turnos' name='Turnos' action='action_turno_act_window' parent='menu_kine_turno' />
+        <menuitem id='menu_kine_generaciones' name='Generaciones' action='action_turno_act_window' parent='menu_kine_turno'/>
+        <menuitem id='menu_kine_configuracion' name='Configuración' action='action_turno_act_window' parent='menu_kine_turno'/>
 
         <menuitem id='menu_turnos' name='Ver turnos' action='action_turno_act_window'  parent='menu_kine_turnos'/>
         <menuitem id='menu_generaciones' name='Generar turnos' action='action_generador_turno_act_window' parent='menu_kine_generaciones'/>
         <menuitem id='menu_dias_no_laborales' name='Dias no laborales' action='action_dia_no_laboral_act_window' parent='menu_kine_configuracion'/>
+
+        <menuitem id='menu_company' name='Companias' action='action_company_act_window' parent='menu_kine_company' />
     </data>
 </odoo>

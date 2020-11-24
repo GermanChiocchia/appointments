@@ -2,7 +2,7 @@
 <odoo>
     <data noupdate="0">
         <record id="view_form_company" model="ir.ui.view">
-            <field name="name"></field>
+            <field name="name">Compania</field>
             <field name="model">res.company</field>
             <field name="arch" type="xml">
                 <form string='Datos de compania'>
@@ -10,20 +10,20 @@
                         
                     </header>
                     <sheet>
-                        <div>
+                        <!-- <div>
                             <label for="" class='oe_edit_only' />
                             <h1><field name="" /></h1>
-                        </div>
+                        </div> -->
                         <notebook>
 
                             <page string='Horarios' >
-                                <group col='4' string='Horarios compania'>
+                                <group string='Horarios compania'>
                                     <field name="timeframes_ids" />
                                </group>
                             </page>
 
-                            <page string='Turnos' >
-                                <group col='4' string='Datos de turnos'>
+                            <!-- <page string='Turnos' >
+                                <group string='Datos de turnos'>
                                     <field name="day" />
                                     <field name="enabled" />
                                         <newline />
@@ -31,19 +31,20 @@
                                         <newline />
                                     <field name="company_id" />
                                </group>
-                            </page>
+                            </page> -->
 
-                            <page string="Campos nuevos">
+                            <!-- <page string="Campos nuevos">
 
-                            </page>
+                            </page> -->
 
                         </notebook>
                     </sheet>
                 </form>
             </field>
         </record>
+
         <record id="view_tree_compania" model="ir.ui.view">
-            <field name="name"></field>
+            <field name="name">Compania</field>
             <field name="model">res.company</field>
             <field name="arch" type="xml">
                 <tree string='Companias' sample='1'>
@@ -52,15 +53,27 @@
             </field>
 
         </record>
+
         <record id="view_search_compania" model="ir.ui.view">
-            <field name="name"></field>
+            <field name="name">Compania</field>
             <field name="model">res.company</field>
             <field name="arch" type="xml">
-                <search name="Busqueda de companias">
+                <search string="Busqueda de companias">
                     <field name="timeframes_ids" />
                 </search>
             </field>
 
+        </record>
+
+         <record id="action_company_act_window" model="ir.actions.act_window">
+            <field name="type">ir.actions.act_window</field>
+            <field name="name">Companias</field>
+            <field name="res_model">res.company</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Ingrese compania</p>
+            </field>
+            <field name="target">current</field>
         </record>
     </data>
 </odoo>
