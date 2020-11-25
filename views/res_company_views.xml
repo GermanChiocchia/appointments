@@ -4,51 +4,38 @@
         <record id="res_company_view_form" model="ir.ui.view">
             <field name="name">res.company.view.form</field>
             <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
             <field name="arch" type="xml">
-                <form string='Datos de compania'>
-                    <header>
-                        
-                    </header>
-                    <sheet>
-                        <!-- <div>
-                            <label for="" class='oe_edit_only' />
-                            <h1><field name="" /></h1>
-                        </div> -->
-                        <notebook>
-
-                            <page string='Horarios' >
-                                <group string='Horarios compania'>
-                                    <field name="timeframes_ids" />
-                               </group>
-                            </page>
-
-                            <!-- <page string='Turnos' >
-                                <group string='Datos de turnos'>
-                                    <field name="day" />
-                                    <field name="enabled" />
-                                        <newline />
-                                    <separator string='Compania' />
-                                        <newline />
-                                    <field name="company_id" />
-                               </group>
-                            </page> -->
-
-                            <!-- <page string="Campos nuevos">
-
-                            </page> -->
-
-                        </notebook>
-                    </sheet>
-                </form>
+                <notebook position="inside">
+                    <page string='Horarios' >
+                        <field name="timeframes_ids" nolabel='1'>
+                            <tree string="Caption" create="1" delete="1" edit="1" >
+                                <field name="day" />
+                                <field name="enabled" />                                    
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Campos nuevos">
+                        <field name="cambio_compania_ids" nolabel='1'>
+                            <tree string="Caption" create="1" delete="1" edit="1" >
+                                <field name="appointment_qty" />
+                                <field name="appointment_duration" />
+                                <field name="start_time" />
+                                <field name="end_time" />
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
             </field>
         </record>
 
-        <record id="res_company_view_tree" model="ir.ui.view">
+        <!-- <record id="res_company_view_tree" model="ir.ui.view">
             <field name="name">res.company.view.tree</field>
             <field name="model">res.company</field>
             <field name="arch" type="xml">
                 <tree string='Companias' sample='1'>
                     <field name="timeframes_ids" />
+                    <field name="cambio_compania_ids" />
                 </tree>
             </field>
 
@@ -62,8 +49,7 @@
                     <field name="timeframes_ids" />
                 </search>
             </field>
-
-        </record>
+        </record> -->
 
          <record id="res_company_action_act_window" model="ir.actions.act_window">
             <field name="type">ir.actions.act_window</field>

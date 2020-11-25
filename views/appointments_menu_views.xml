@@ -4,7 +4,7 @@
         <menuitem id='appointments_root_menu' name='Appointments' />
 
         <menuitem id='appointments_turno_root_menu' name='Turno' action='appointments_turno_action_act_window' parent='appointments_root_menu' />
-        <menuitem id='res_company_root_menu' name='Companias' action='appointments_turno_action_act_window' parent='appointments_root_menu' />
+        <menuitem id='res_company_root_menu' name='Companias' action='res_company_action_act_window' parent='appointments_root_menu' />
 
         <menuitem id='appointments_turno_menu' name='Turnos' action='appointments_turno_action_act_window' parent='appointments_turno_root_menu' />
         <menuitem id='appointments_generador_turno_menu' name='Generaciones' action='appointments_turno_action_act_window' parent='appointments_turno_root_menu'/>
