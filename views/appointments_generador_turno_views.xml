@@ -27,7 +27,7 @@
                                         <newline />
                                     <separator string='Datos de turnos' />
                                         <newline />
-                                    <field name="turnos_ids" />
+                                    <field name="turnos_ids"  nolabel='1' />
                                </group>
                             </page>
                         </notebook>
