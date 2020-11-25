@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data noupdate="0">
-        <record id="generador_turno_view_form" model="ir.ui.view">
-            <field name="name">generador.turno.view.form</field>
-            <field name="model">asw.generador_turno</field>
+        <record id="appointments_generador_turno_view_form" model="ir.ui.view">
+            <field name="name">appointments.generador.turno.view.form</field>
+            <field name="model">appointments.generador.turno</field>
             <field name="arch" type="xml">
                 <form string='Datos del generador de turnos'>
                     <header>
@@ -36,9 +36,9 @@
             </field>
         </record>
 
-        <record id="generador_turno_view_tree" model="ir.ui.view">
-            <field name="name">generador.turno.view.tree</field>
-            <field name="model">asw.generador_turno</field>
+        <record id="appointments_generador_turno_view_tree" model="ir.ui.view">
+            <field name="name">appointments.generador.turno.view.tree</field>
+            <field name="model">appointments.generador.turno</field>
             <field name="arch" type="xml">
                 <tree string='Generador de turnos' sample='1'>
                     <field name="company_id" />
@@ -50,9 +50,9 @@
             </field>
         </record>
 
-        <record id="generador_turno_view_search" model="ir.ui.view">
-            <field name="name">generador.turno.view.search</field>
-            <field name="model">asw.generador_turno</field>
+        <record id="appointments_generador_turno_view_search" model="ir.ui.view">
+            <field name="name">appointments.generador.turno.view.search</field>
+            <field name="model">appointments.generador.turno</field>
             <field name="arch" type="xml">
                 <search string='Generador de turnos'>
                     <field name="company_id" />
@@ -67,10 +67,10 @@
             </field>
         </record>
 
-        <record id="generador_turno_action_act_window" model="ir.actions.act_window">
+        <record id="appointments_generador_turno_action_act_window" model="ir.actions.act_window">
             <field name="type">ir.actions.act_window</field>
-            <field name="name">generador.turno.action.act.window</field>
-            <field name="res_model">asw.generador_turno</field>
+            <field name="name">appointments.generador.turno.action.act.window</field>
+            <field name="res_model">appointments.generador.turno</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">Genere el primer turno</p>

@@ -24,11 +24,11 @@ appointments Module Project.
         ],
     },
     'data': [
-        'views/dia_no_laboral_view.xml',
-        'views/generador_turnos_view.xml',
-        'views/turno_view.xml',
-        'views/res_company_view.xml',
-        'views/kine_menu_view.xml',
+        'views/appointments_dia_no_laboral_views.xml',
+        'views/appointments_generador_turno_views.xml',
+        'views/appointments_turno_views.xml',
+        'views/res_company_views.xml',
+        'views/appointments_menu_views.xml',
         'security/ir.model.access.csv',
     ],
     'demo': [
