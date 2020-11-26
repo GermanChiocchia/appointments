@@ -67,11 +67,23 @@
             </field>
         </record>
 
+        <record id="appointments_generador_turno_view_calendar" model="ir.ui.view">
+            <field name="name">appointments.generador.turno.view.calendar</field>
+            <field name="model">appointments.generador.turno</field>
+            <field name="arch" type="xml">
+                <calendar string="Calendar" date_start="date_start" date_stop="date_end" color="state">
+                    <field name="date_start" />
+                    <field name="date_end" />
+                    <field name="state" />
+                </calendar>
+            </field>
+        </record>
+
         <record id="appointments_generador_turno_action_act_window" model="ir.actions.act_window">
             <field name="type">ir.actions.act_window</field>
             <field name="name">appointments.generador.turno.action.act.window</field>
             <field name="res_model">appointments.generador.turno</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,calendar</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">Genere el primer turno</p>
             </field>

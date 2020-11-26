@@ -1,6 +1,6 @@
-1. Crear vista de calendario para turnos
-2. Crear vista de calendario para generador de turnos
-3. Crear vista calendario para dias no laborales
+1. Crear vista de calendario para turnos    |HECHO
+2. Crear vista de calendario para generador de turnos   |HECHO
+3. Crear vista calendario para dias no laborales    |HECHO
 4. Donde haya fecha desde y hasta, al cambiar la fecha desde, proponer la misma como fecha Hasta
 5. Generación de Turnos
 
