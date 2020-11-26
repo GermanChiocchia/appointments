@@ -3,11 +3,6 @@
     <data noupdate="0">
         <menuitem id='appointments_root_menu' name='Appointments' />
 
-        <menuitem id='appointments_turno_root_menu' name='Turno' action='appointments_turno_action_act_window' parent='appointments_root_menu' />
-        <menuitem id='res_company_root_menu' name='Companias' action='res_company_action_act_window' parent='appointments_root_menu' />
-        <!-- <menuitem id='appointments_turno_root_menu' name='Turno' parent='appointments_root_menu' /> -->
-        <!-- <menuitem id='res_company_root_menu' name='Companias' action='appointments_turno_action_act_window' parent='appointments_root_menu' /> -->
-
         <menuitem id='appointments_turno_menu' name='Turnos' parent='appointments_root_menu' />
         <menuitem id='appointments_generador_turno_menu' name='Generaciones' parent='appointments_root_menu'/>
         <menuitem id='appointments_dia_no_laboral_menu' name='Configuración' parent='appointments_root_menu'/>
@@ -15,7 +10,5 @@
         <menuitem id='appointments_turno_sub_menu' name='Ver turnos' action='appointments_turno_action_act_window'  parent='appointments_turno_menu'/>
         <menuitem id='appointments_generador_turno_sub_menu' name='Generar turnos' action='appointments_generador_turno_action_act_window' parent='appointments_generador_turno_menu'/>
         <menuitem id='appointments_dia_no_laboral_sub_menu' name='Dias no laborales' action='appointments_dia_no_laboral_action_act_window' parent='appointments_dia_no_laboral_menu'/>
-
-        <!-- <menuitem id='res_company_menu' name='Companias' action='res_company_action_act_window' parent='res_company_root_menu' /> -->
     </data>
 </odoo>
