@@ -73,7 +73,7 @@
             </field>
         </record>
 
-        <!-- <record id="res_company_view_tree" model="ir.ui.view">
+        <record id="res_company_view_tree" model="ir.ui.view">
             <field name="name">res.company.view.tree</field>
             <field name="model">res.company</field>
             <field name="arch" type="xml">
@@ -104,6 +104,6 @@
                 <p class="oe_view_nocontent_create">Ingrese compania</p>
             </field>
             <field name="target">current</field>
-        </record> -->
+        </record>
     </data>
 </odoo>
