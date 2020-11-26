@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data noupdate="0">
-        <record id="timeframe_data_lunes" model="appointments.appointment">
-            <field name="name">Lunes</field>
+        <record id="timeframe_data_lunes" model="appointments.timeframe">
+            <field name="day">Lunes</field>            
+            <field name="enabled" eval="True" />            
+            <field name="company_id" ref="base.main_company" />
         </record>
             
-        <record id="timeframe_data_martes" model="appointments.appointment">
+        <!-- <record id="timeframe_data_martes" model="appointments.appointment">
             <field name="name">Martes</field>
         </record>
 
@@ -27,6 +29,6 @@
 
         <record id="timeframe_data_domingo" model="appointments.appointment">
             <field name="name">Domingo</field>
-        </record>
+        </record> -->
     </data>
 </odoo>
