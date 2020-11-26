@@ -30,6 +30,7 @@ appointments Module Project.
         'views/res_company_views.xml',
         'views/appointments_menu_views.xml',
         'security/ir.model.access.csv',
+        'data/timeframe_data.xml',
     ],
     'demo': [
     ],

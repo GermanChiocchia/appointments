@@ -2,5 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_appointments_dia_no_laboral,appointments_dia_no_laboral,model_appointments_dia_no_laboral,,1,1,1,1
 access_appointments_turno,appointments_turno,model_appointments_turno,,1,1,1,1
 access_appointments_generador_turno,appointments_generador_turno,model_appointments_generador_turno,,1,1,1,1
-access_appointments_appointment,appointments_appointment,model_appointments_appointment,,1,1,1,1
-access_appointments_cambio_compania,appointments_cambio_compania,model_appointments_cambio_compania,,1,1,1,1
+access_appointments_timeframe,appointments_timeframe,model_appointments_timeframe,,1,1,1,1
