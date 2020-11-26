@@ -13,3 +13,5 @@ class AppointmentsTurno(models.Model):
     partner_id = fields.Many2one(string=u'Cliente',comodel_name='res.partner',ondelete='set null')
     state = fields.Selection(string='Estado',selection=[('borrador', 'Borrador'),('asignado', 'Asignado'),('cancelado', 'Cancelado'),('finalizado', 'Finalizado')],default='borrador')
     generator_id = fields.Many2one(string=u'Generador',comodel_name='appointments.generador.turno')
+
+   

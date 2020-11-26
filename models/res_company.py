@@ -12,7 +12,7 @@ class ResCompany(models.Model):
     _inherit = 'res.company'
 
     timeframes_ids = fields.One2many(string=u'Horarios',comodel_name='appointments.timeframe',inverse_name='company_id')
-    appointment_qty = fields.Integer(string=u'Cantidad de turnos')
+    appointment_qty = fields.Integer(string=u'Cantidad de turnos Simultaneos')
     appointment_duration = fields.Integer(string=u'Duración del turno')
     start_time = fields.Float(string=u'Hora de inicio')
     end_time = fields.Float(string=u'Hora de fin')
