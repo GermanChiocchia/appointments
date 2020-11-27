@@ -12,6 +12,11 @@ class AppointmentsGeneradorTurno(models.Model):
     state = fields.Selection(string='Estado',selection=[('borrador','Borrador'), ('procesado', 'Procesado')])
     turnos_ids = fields.One2many(string=u'Turnos generados',comodel_name='appointments.turno',inverse_name='generator_id')
 
+    @api.onchange('date_start')
+    def onchange_date_start(self):
+        if self.date_start:
+            self.date_end = self.date_start
+
     def generate_appointment(self, date, date_start, date_end):
         self.env['appointments.turno'].create({
             'company_id' : self.env.user.company_id.id,

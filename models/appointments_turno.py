@@ -14,4 +14,7 @@ class AppointmentsTurno(models.Model):
     state = fields.Selection(string='Estado',selection=[('borrador', 'Borrador'),('asignado', 'Asignado'),('cancelado', 'Cancelado'),('finalizado', 'Finalizado')],default='borrador')
     generator_id = fields.Many2one(string=u'Generador',comodel_name='appointments.generador.turno')
 
-   
+    @api.onchange('date_start')
+    def onchange_date_start(self):
+        if self.date_start:
+            self.date_end = self.date_start
