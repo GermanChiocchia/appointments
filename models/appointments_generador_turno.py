@@ -17,7 +17,7 @@ class AppointmentsGeneradorTurno(models.Model):
         if self.date_start:
             self.date_end = self.date_start
 
-    def generate_appointment(self, date, date_start, date_end):
+    def generate_appointment(self, date):
         self.env['appointments.turno'].create({
             'company_id' : self.env.user.company_id.id,
             'date' : date,
@@ -25,3 +25,7 @@ class AppointmentsGeneradorTurno(models.Model):
             # 'date_start' : date_start,
             # 'date_end' : date_end
         })
+
+    def appointment_generator(self,date_start,date_end):
+        for dia in range(self.date_start,self.date_end):
+            self.generate_appointment(dia)
