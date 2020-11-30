@@ -8,6 +8,8 @@
                 <form string='Datos del generador de turnos'>
                     <header>
                         
+                        <button name="appointment_generator" string="Generar Turnos" type="object" class="oe_highlight"/>
+                        
                     </header>
                     <sheet>
                         <div>

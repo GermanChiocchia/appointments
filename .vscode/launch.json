@@ -9,7 +9,7 @@
             "type": "python",
             "request": "launch",
             "stopOnEntry": false,
-            "pythonPath": "${command:python.interpreterPath}",
+            "python": "${command:python.interpreterPath}",
             //"program": "${file}", use this to debug opened file.
             "program": "/home/administrador/odoo10/odoo-bin",
             "args": [
@@ -26,7 +26,7 @@
             "type": "python",
             "request": "launch",
             "stopOnEntry": false,
-            "pythonPath": "${command:python.interpreterPath}",
+            "python": "${command:python.interpreterPath}",
             //"program": "${file}", use this to debug opened file.
             "program": "/home/ramiro/odoo10/odoo-bin",
             "args": [
@@ -43,7 +43,7 @@
             "type": "python",
             "request": "launch",
             "stopOnEntry": false,
-            "pythonPath": "${command:python.interpreterPath}",
+            "python": "${command:python.interpreterPath}",
             //"program": "${file}", use this to debug opened file.
             "program": "/home/nahuel/odoo10/odoo-bin",
             "args": [

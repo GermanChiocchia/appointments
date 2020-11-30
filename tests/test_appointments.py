@@ -3,13 +3,21 @@ from odoo.tests import TransactionCase
 
 class test_appointments(TransactionCase):
     def test_appointment_generator_unico_false(self):
-        esperado = 3
-        obte = self.env['appointments.generador.turno'].appointment_generator('2020-01-24','2020-01-27')
-        obtenido = len(obte)
+        esperado = 4
+        generator = self.env['appointments.generador.turno'].create({
+            'date_start' : '2020-01-24',
+            'date_end' : '2020-01-27'
+        })
+        generator.appointment_generator()
+        obtenido = len(generator.turnos_ids)
         self.assertEqual(esperado, obtenido)
 
     def test_appointment_generator_unico_true(self):
-        esperado = 4
-        obte = self.env['appointments.generador.turno'].appointment_generator('2020-01-24','2020-01-27')
-        obtenido = len(self.env['appointments.generador.turno'])
+        esperado = 5
+        generator = self.env['appointments.generador.turno'].create({
+            'date_start' : '2020-01-24',
+            'date_end' : '2020-01-28'
+        })
+        generator.appointment_generator()
+        obtenido = len(generator.turnos_ids)
         self.assertEqual(esperado, obtenido)

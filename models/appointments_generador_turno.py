@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
 from odoo import api, exceptions, fields, models
 
+from datetime import date, datetime
+from datetime import timedelta
+from odoo.tools import DEFAULT_SERVER_DATE_FORMAT as DATE_FORMAT
+from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT as DATETIME_FORMAT
+
+
 
 class AppointmentsGeneradorTurno(models.Model):
     _name = 'appointments.generador.turno'
@@ -26,6 +32,9 @@ class AppointmentsGeneradorTurno(models.Model):
             # 'date_end' : date_end
         })
 
-    def appointment_generator(self,date_start,date_end):
-        for dia in range(self.date_start,self.date_end):
-            self.generate_appointment(dia)
+    def appointment_generator(self):
+        dif = abs(self.date_start - self.date_end) + timedelta(days=1)
+
+        for days_offset in range(dif.days):
+            day = self.date_start + timedelta(days=days_offset)        
+            self.generate_appointment(day)
