@@ -6,7 +6,8 @@ class test_appointments(TransactionCase):
         esperado = 4
         generator = self.env['appointments.generador.turno'].create({
             'date_start' : '2020-01-24',
-            'date_end' : '2020-01-27'
+            'date_end' : '2020-01-27',
+            'state' : 'procesado'
         })
         generator.appointment_generator()
         obtenido = len(generator.turnos_ids)
@@ -16,7 +17,8 @@ class test_appointments(TransactionCase):
         esperado = 5
         generator = self.env['appointments.generador.turno'].create({
             'date_start' : '2020-01-24',
-            'date_end' : '2020-01-28'
+            'date_end' : '2020-01-28',
+            'state' : 'procesado'
         })
         generator.appointment_generator()
         obtenido = len(generator.turnos_ids)

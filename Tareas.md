@@ -20,8 +20,8 @@
                 6. aumenta la hora de inicio segun la duración de la compania
     
 
-a. 1 - 5
-b. 1 - 2.2 - 5
+a. 1 - 5    |HECHO
+b. 1 - 2.2 - 5    |HECHO
 c. 1 - 2 - 5 
 d. 1 - 2 - 3 - 5
 e. 1 - 2 - 3 - 4 - 5 - 6

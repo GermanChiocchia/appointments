@@ -31,10 +31,17 @@ class AppointmentsGeneradorTurno(models.Model):
             # 'date_start' : date_start,
             # 'date_end' : date_end
         })
+    
+    def get_day(self,day,days_offset):
+        dia = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo']
+        ref = datetime.datetime.strptime('01012018', '%d%m%Y').date()
+        return dia[abs(day - ref + days_offset) % 7]
 
+    
     def appointment_generator(self):
         dif = abs(self.date_start - self.date_end) + timedelta(days=1)
 
         for days_offset in range(dif.days):
-            day = self.date_start + timedelta(days=days_offset)        
-            self.generate_appointment(day)
+            day = self.date_start + timedelta(days=days_offset)
+            if self.env['appointments.timeframe'].search(['day','=', 'get_day(day,days_offset)']):
+                self.generate_appointment(day)
