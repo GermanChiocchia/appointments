@@ -43,7 +43,7 @@ class AppointmentsGeneradorTurno(models.Model):
 
         for days_offset in range(dif.days):
             dey = self.date_start + timedelta(days=days_offset)
-            for i in range(6):
+            for i in range(7):
                 if self.env['appointments.timeframe'].search([])[i].day == self.get_day(dey,days_offset):
                     if self.env['appointments.timeframe'].search([])[i].enabled:
                         self.generate_appointment(dey)
