@@ -51,7 +51,7 @@ class AppointmentsGeneradorTurno(models.Model):
         recs_tf = self.env['appointments.timeframe'].search([])
         for days_offset in range(dif.days):
             dey = self.date_start + timedelta(days=days_offset)
-            for i in range(len(recs_tf)):
-                if (recs_tf[i].day == self.get_day(dey,days_offset)) and (recs_tf[i].enabled):
+            for r_tf in range(len(recs_tf)):
+                if (recs_tf[r_tf].day == self.get_day(dey,days_offset)) and (recs_tf[r_tf].enabled):
                     if self.valida_no_laboral(dey):
                         self.generate_appointment(dey)
