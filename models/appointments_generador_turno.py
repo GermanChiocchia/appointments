@@ -38,20 +38,20 @@ class AppointmentsGeneradorTurno(models.Model):
         return dia[abs(dey - ref).days % 7]
 
     def valida_no_laboral(self,dey):
-        rec_no_laboral = self.env['appointments.dia.no.laboral'].search([])
-        for j in range(len(rec_no_laboral)):
-            dif_lab = abs(rec_no_laboral[j].date_start - rec_no_laboral[j].date_end + timedelta(days=1))
-            for k in range(dif_lab.days):
-                dey_lab = rec_no_laboral[j].date_start + timedelta(days=k)
-                if dey_lab != dey:
+        recs_dnl = self.env['appointments.dia.no.laboral'].search([])
+        for r_dnl in range(len(recs_dnl)):
+            dif_lab = abs(recs_dnl[r_dnl].date_start - recs_dnl[r_dnl].date_end + timedelta(days=1))
+            for offset_dnl in range(dif_lab.days):
+                dnl = recs_dnl[r_dnl].date_start + timedelta(days=offset_dnl)
+                if dnl != dey:
                     return True
     
     def appointment_generator(self):
         dif = abs(self.date_start - self.date_end) + timedelta(days=1)
-        rec_timeframe = self.env['appointments.timeframe'].search([])
+        recs_tf = self.env['appointments.timeframe'].search([])
         for days_offset in range(dif.days):
             dey = self.date_start + timedelta(days=days_offset)
-            for i in range(len(rec_timeframe)):
-                if (rec_timeframe[i].day == self.get_day(dey,days_offset)) and (rec_timeframe[i].enabled):
-                    #if self.valida_no_laboral(dey):
+            for i in range(len(recs_tf)):
+                if (recs_tf[i].day == self.get_day(dey,days_offset)) and (recs_tf[i].enabled):
+                    if self.valida_no_laboral(dey):
                         self.generate_appointment(dey)
