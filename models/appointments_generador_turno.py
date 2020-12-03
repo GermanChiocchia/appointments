@@ -32,7 +32,7 @@ class AppointmentsGeneradorTurno(models.Model):
             # 'date_end' : date_end
         })
     
-    def get_day(self,dey,days_offset):
+    def get_day(self,dey):
         dia = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo']
         ref = datetime.strptime('01012018', '%d%m%Y').date()
         return dia[abs(dey - ref).days % 7]
@@ -44,10 +44,10 @@ class AppointmentsGeneradorTurno(models.Model):
 
     def appointment_generator(self):
         dif = abs(self.date_start - self.date_end) + timedelta(days=1)
-        recs_tf = self.env['appointments.timeframe'].search([])
+        tf = self.env['appointments.timeframe']
         for days_offset in range(dif.days):
             dey = self.date_start + timedelta(days=days_offset)
-            for r_tf in range(len(recs_tf)):
-                if (recs_tf[r_tf].day == self.get_day(dey,days_offset)) and (recs_tf[r_tf].enabled):
-                    if self.valida_no_laboral(dey):
-                        self.generate_appointment(dey)
+            dia_sem = self.get_day(dey)
+            domain = [('day','=', dia_sem),('enabled','=',True)]
+            if len(tf.search(domain)) != 0 and self.valida_no_laboral(dey):
+                self.generate_appointment(dey)
