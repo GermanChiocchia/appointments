@@ -2,7 +2,7 @@
 2. Crear vista de calendario para generador de turnos   |HECHO
 3. Crear vista calendario para dias no laborales    |HECHO
 4. Donde haya desde y hasta, al cambiar la fecha desde, proponer la misma fecha Hasta    |HECHO
-5. Generación de Turnos
+5. Generación de Turnos    |HECHO
 
 
 1. Recorrer los dias desde la fecha Desde hasta la fecha hasta
@@ -20,8 +20,8 @@
                 6. aumenta la hora de inicio segun la duración de la compania
     
 
-a. 1 - 5    |HECHO
-b. 1 - 2.2 - 5    |HECHO
-c. 1 - 2 - 5 
-d. 1 - 2 - 3 - 5
-e. 1 - 2 - 3 - 4 - 5 - 6
+a. 1 - 5                     |HECHO
+b. 1 - 2.2 - 5               |HECHO
+c. 1 - 2 - 5                 |HECHO
+d. 1 - 2 - 3 - 5             |HECHO
+e. 1 - 2 - 3 - 4 - 5 - 6     |HECHO

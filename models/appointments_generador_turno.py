@@ -38,9 +38,9 @@ class AppointmentsGeneradorTurno(models.Model):
         return dia[abs(dey - ref).days % 7]
 
     def valida_no_laboral(self,dey):
-        recs_dnl = self.env['appointments.dia.no.laboral']
+        dnl = self.env['appointments.dia.no.laboral']
         domain = [('date_start','<=', dey),('date_end','>=', dey)]
-        return len(recs_dnl.search(domain)) == 0
+        return len(dnl.search(domain)) == 0
 
     def appointment_generator(self):
         dif = abs(self.date_start - self.date_end) + timedelta(days=1)
@@ -50,4 +50,8 @@ class AppointmentsGeneradorTurno(models.Model):
             dia_sem = self.get_day(dey)
             domain = [('day','=', dia_sem),('enabled','=',True)]
             if len(tf.search(domain)) != 0 and self.valida_no_laboral(dey):
-                self.generate_appointment(dey)
+                com = self.env.user.company_id
+                if com.start_time < com.end_time:
+                    com.start_time += com.appointment_duration
+                    for sim in range(com.appointment_qty):
+                        self.generate_appointment(dey)
