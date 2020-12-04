@@ -22,12 +22,17 @@ class test_appointments(TransactionCase):
         esperado = (5-1)*2      # esperado = (a-b)*n 
         generator = self.env['appointments.generador.turno'].create({
             'date_start' : '2020-01-24',
-            'date_end' : '2020-01-28',      #   a = date_end - date_start
-            'state' : 'procesado'    
+            'date_end' : '2020-01-28',      #   a = date_end - date_start   
         })
         self.env['appointments.dia.no.laboral'].create({
             'date_start' : '2020-01-24',
             'date_end' : '2020-01-24',      #   b = date_end - date_start   (no laboral)
+        })
+        self.env['res.company'].create({
+            'appointment_qty' : '2',
+            'appointment_duration' : '1',
+            'start_time' : '8',
+            'end_time' : '17'
         })
         generator.appointment_generator()   #   n = turnos simultaneos
         obtenido = len(generator.turnos_ids)

@@ -51,7 +51,8 @@ class AppointmentsGeneradorTurno(models.Model):
             domain = [('day','=', dia_sem),('enabled','=',True)]
             if len(tf.search(domain)) != 0 and self.valida_no_laboral(dey):
                 com = self.env.user.company_id
-                if com.start_time < com.end_time:
-                    com.start_time += com.appointment_duration
+                aux = com.start_time
+                while aux < com.end_time:
+                    aux += com.appointment_duration
                     for sim in range(com.appointment_qty):
                         self.generate_appointment(dey)
